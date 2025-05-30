@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hab+Dash - Premium Embroidery Supplies</title>
+  <meta name="description" content="Premium machine embroidery and quilting threads, stabilizers, and supplies from Hab+Dash">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    
+    :root {
+      --primary: #E63946;
+      --primary-dark: #D62839;
+      --text: #1A1A1A;
+      --text-light: #444;
+      --bg-light: #F9F9F9;
+      --white: #FFFFFF;
+      --radius: 8px;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: var(--white);
+      padding: 12px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    
+    .btn:hover {
+      background: var(--primary-dark);
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .section {
+      padding: 80px 0;
+    }
+    
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    
+    
+    .hero {
+      background: 
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url('https://sherocommerce.com/wp-content/uploads/Mask-group-1-1-1024x403.png') no-repeat center center/cover;
+      height: 500px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      position: relative;
+    }
+    
+    .hero-content {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: var(--radius);
+      max-width: 400px;
+      margin: 0 40px 40px 0;
+      text-align: right;
+    }
+    
+    .hero-title {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    
+    
+    .products-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 60px 0;
+    }
+    
+    .product-card {
+      flex: 1;
+      min-width: 0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .product-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: contain;
+      background-color: #f5f5f5;
+      padding: 20px;
+      margin-bottom: 15px;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .product-name {
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+    
+    
+    .features {
+      background: var(--bg-light);
+    }
+    
+    .features-container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    
+    .feature-card {
+      background: var(--white);
+      padding: 40px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    
+    .feature-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+    }
+    
+    .products-scroll {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      padding: 20px 0;
+      scrollbar-width: thin;
+    }
+    
+    .products-scroll img {
+      width: 160px;
+      border-radius: var(--radius);
+      transition: transform 0.3s ease;
+    }
+    
+    .products-scroll img:hover {
+      transform: scale(1.05);
+    }
+    
+    
+    .testimonials {
+      text-align: center;
+      background: var(--bg-light);
+    }
+    
+    .testimonial-text {
+      max-width: 800px;
+      margin: 0 auto 24px;
+      font-style: italic;
+      font-size: 1.1rem;
+    }
+    
+    .testimonial-author {
+      font-weight: 600;
+      color: var(--primary);
+    }
+    
+    
+    .footer {
+      background: var(--white);
+      padding: 60px 0 40px;
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    
+    .footer-column h4 {
+      margin-bottom: 16px;
+      font-size: 1.1rem;
+      color: var(--primary);
+    }
+    
+    .footer-column ul {
+      list-style: none;
+    }
+    
+    .footer-column li {
+      margin-bottom: 8px;
+    }
+    
+    .footer-column a {
+      color: var(--text-light);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-column a:hover {
+      color: var(--primary);
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      padding-top: 40px;
+      border-top: 1px solid #eee;
+      color: var(--text-light);
+      font-size: 0.9rem;
+    }
+    
+   
+    .retail-stores {
+      padding: 60px 0;
+      background: rgb(0, 0, 0);
+    }
+    
+    .retail-stores-container {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+    
+    .retail-stores-content {
+      flex: 1;
+    }
+    
+    .retail-stores-image {
+      flex: 1;
+    }
+    
+    .retail-stores-image img {
+      width: 100%;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    
+    .retail-stores h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: var(--primary);
+    }
+    
+    .retail-stores p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      color: var(--text-light);
+    }
+    
+    
+    @media (max-width: 768px) {
+      .hero {
+        height: 400px;
+        background-position: 60% center;
+        align-items: flex-end;
+        justify-content: center;
+      }
+      
+      .hero-content {
+        margin: 0 auto 40px;
+        max-width: 90%;
+        padding: 20px;
+        text-align: center;
+      }
+      
+      .hero-title {
+        font-size: 1.8rem;
+      }
+      
+      .products-grid {
+        flex-direction: column;
+        gap: 30px;
+      }
+      
+      .product-card img {
+        height: 250px;
+      }
+      
+      .section {
+        padding: 60px 0;
+      }
+      
+      .feature-card {
+        padding: 30px;
+      }
+      
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+
+      
+      .retail-stores-container {
+        flex-direction: column;
+      }
+      
+      .retail-stores-content {
+        text-align: center;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero {
+        height: 350px;
+      }
+      
+      .hero-title {
+        font-size: 1.5rem;
+      }
+      
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Add color to your masterpiece</h1>
+      <a href="#" class="btn">Shop Now</a>
+    </div>
+  </section>
+  
+  <div class="container">
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="https://sherocommerce.com/wp-content/uploads/on-hover-NC-5.png" alt="Magnetic Core Bobbin" loading="lazy">
+        <div class="product-name">GLIDE</div>
+      </div>
+      <div class="product-card">
+        <img src="https://shuttlesandneedles.com/cdn/shop/products/ScreenShot2020-06-30at6.43.24PM_1024x1024.png?v=1623932381" alt="Premium Stabilizer" loading="lazy">
+        <div class="product-name">MAGNETIC CORE BOBBIK</div>
+      </div>
+      <div class="product-card">
+        <img src="https://media.rainpos.com/12056/habanddash_20230713085751.png" alt="Embroidery Thread" loading="lazy">
+        <div class="product-name">PREMIUM STABILIZER</div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <section class="retail-stores">
+    <div class="container">
+      <div class="retail-stores-container">
+        <div class="retail-stores-content">
+          <h2>Retail Store Locator</h2>
+          <p>Buy our products in more than 600 retail stores</p>
+          <a href="#" class="btn">Search retail store</a>
+        </div>
+        <div class="retail-stores-image">
+          <img src="https://media.istockphoto.com/id/1370510829/vector/map-world-seperate-countries-blue-with-white-outline.jpg?s=612x612&w=0&k=20&c=xM11CVIE6THv9bCcr_xRXb74ZWYQYIcq3YsQB5NSF68="  alt="World Map" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <section class="features section">
+    <div class="container">
+      <div class="features-container">
+        <div class="feature-card">
+          <h2>Featured Products</h2>
+          <div class="products-scroll">
+            <img src="https://www.sewingincanada.com/cdn/shop/products/HEAVYCUTAWAY_401bec45-e3f8-407d-b88d-7dbf14ee4809.jpg?v=1654545391" alt="Embroidery Stabilizer" loading="lazy">
+            <img src="https://cubbies.co/wp-content/uploads/NEW-product-dumble-grey-1.jpg" alt="Cubbie Grey Elephant" loading="lazy">
+            <img src="https://a1vacandsew.net/cdn/shop/products/kimberbell-cup-of-cheer-thread-collection-61031_1.webp?v=1653496393" alt="Kimberbell Cup of Cheer" loading="lazy">
+            <img src="data:image/jpeg;base64,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" alt="Kimberbell Two Scoops" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <section class="testimonials section">
+    <div class="container">
+      <h2 class="section-title">Testimonials</h2>
+      <p class="testimonial-text">
+        As a machine quilter, I love the sheen of Glide and how it adds an extra special touch to my quilts. It's the perfect blend of beauty and strength. Not only do I love the thread, but I love working with Hab+DASH to bring out the best in my quilting.
+      </p>
+      <p class="testimonial-author">– Angela Walters</p>
+      <p>1/10</p>
+    </div>
+  </section>
+  
+ 
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h4>Hab+Dash</h4>
+          <ul>
+            <li>Top Thread</li>
+            <li>Bobins</li>
+            <li>Stabilizer</li>
+            <li>Notions</li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>SUPPORT</h4>
+          <ul>
+            <li><a href="#">Stitch Rewards</a></li>
+            <li><a href="#">Stitch Rewards</a></li>
+            <li><a href="#">Core Return Program</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Terms and Conditions</a></li>
+            <li><a href="#">Online Dealers</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>USEFUL LINKS</h4>
+          <ul>
+            <li><a href="#">Digital Color Card</a></li>
+            <li><a href="#">Which Bobbin Fits?</a></li>
+            <li><a href="#">Color Conversion</a></li>
+            <li><a href="#">Stabilizer Applications</a></li>
+            <li><a href="#">Selecting a Stailizer</a></li>
+            <li><a href="#">New Site Features</a></li>
+            <li><a href="#">Institute of Heraldry</a></li>
+            <li><a href="#">Kimberbell Solids</a></li>
+            
+          </ul>
+        </div>
+       
+       <div class="footer-column">
+          <h4>ABOUT US</h4>
+          <ul>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Show Schedule</a></li>
+            <li><a href="#">Testimonials</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>NEWSLETTER SIGN UP</h4>
+          <p>Subscribe our newaletter to unlockexclusive access to promotions,new produkt lanuches and more!</p>
+          <form>
+            <button type="submit" class="btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2023 Hab+Dash. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
